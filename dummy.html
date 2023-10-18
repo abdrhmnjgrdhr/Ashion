@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+/* body{
+    margin: 0;
+    padding: 0;
+
+}
+.slider{
+    width: 100%;
+    height: 400px;
+    overflow-x: hidden;
+}
+.slides{
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    height: 400px;
+    width: 100%;
+}
+.slide a{
+    position: relative;
+}
+.slide a::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+.manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manuals{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manuals:not(:last-child){
+    margin-right: 40px;
+}
+.manuals:hover{
+    background-color: red;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+.auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .auto .auto1{
+    background-color: red;
+}
+#radio2:checked ~ .auto .auto2{
+    background-color: red;
+}
+#radio3:checked ~ .auto .auto3{
+    background-color: red;
+} */
+
+/*COUNTDOWN TIMER BEGINS*/
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*COUNTDOWN TIMER ENDS*/
+
+</style>
+<body>
+    <!-- slider  -->
+
+    <!-- <div class="slider">
+        <div class="slides">
+            <input type="radio" id="radio1" name="radios">
+            <input type="radio" id="radio2" name="radios">
+            <input type="radio" id="radio3" name="radios">
+
+            <div class="slide first" style="position: relative;">
+                <img  src="./img/banner/banner-1.jpg" alt="">
+                <div style="position: absolute; top: 23%; left: 32%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <span style="font-size: 18px; color: red; font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie,cursive; font-size: 60px;">The Project Jocket</h1>
+                    <a href="#" style="font-size: 16px; text-decoration: none; color: black; font-family: sans-serif; font-weight: 700;">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide"  style="position: relative;">
+                <img src="./img/banner/banner-2.jpg" alt="">
+                <div style="position: absolute; top: 23%; left: 32%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <span style="font-size: 18px; color: red; font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie,cursive; font-size: 60px;">The Project Jocket</h1>
+                    <a href="#" style="font-size: 16px; text-decoration: none; color: black; font-family: sans-serif; font-weight: 700;">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide" style="position: relative;">
+                <img src="./img/banner/banner-3.jpg" alt="">
+                <div style="position: absolute; top: 23%; left: 32%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <span style="font-size: 18px; color: red; font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie,cursive; font-size: 60px;">The Project Jocket</h1>
+                    <a href="#" style="font-size: 16px; text-decoration: none; color: black; font-family: sans-serif; font-weight: 700;">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="auto">
+                <div class="auto1"></div>
+                <div class="auto2"></div>
+                <div class="auto3"></div>
+            </div>
+
+        </div>
+        <div class="manual">
+            <label for="radio1" class="manuals"></label>
+            <label for="radio2" class="manuals"></label>
+            <label for="radio3" class="manuals"></label>
+        </div> 
+    </div> -->
+
+    <!-- slider  -->
+
+    <!-- COUNTDOWN TIMER BEGINS -->
+
+    <h2>countown to New year</h2>
+    <div class="counter" style="display: flex;">
+        <div class="box" style="height: 50px; width: 50px; text-align: center;">
+            <h2 id="days">00</h2>
+            <small>Days</small>
+        </div>
+        <div class="box" style="height: 50px; width: 50px; text-align: center;  margin-left: 5px;">
+            <h2 id="hours">00</h2>
+            <small>Hours</small>
+        </div>
+        <div class="box" style="height: 50px; width: 50px; text-align: center;  margin-left: 5px;">
+            <h2 id="minutes">00</h2>
+            <small>Minutes</small>
+        </div>
+        <div class="box" style="height: 50px; width: 50px; text-align: center; margin-left: 5px;">
+            <h2 id="seconds">00</h2>
+            <small>Seconds</small>
+        </div>
+    </div>
+
+    <!-- COUNTDOWN TIMER ENDS -->
+
+    
+    <script>
+
+        /*slider Begins*/
+        // var counter = 1;
+
+        // setInterval(function(){
+        //     document.getElementById('radio'+counter).checked= true
+        //     counter = counter+1
+        //     if(counter>3){
+        //         counter=1;
+        //     }
+        // },5000)
+
+        /*slider Begins*/
+
+         /*COUNTDOWN TIMER BEGINS*/
+
+        const days = document.getElementById('days')
+        const hours = document.getElementById('hours')
+        const minutes = document.getElementById('minutes')
+        const seconds = document.getElementById('seconds')
+        
+         
+
+        // function updateTime(){
+        // const currentYear = new Date().getFullYear()
+        // const endDate = new Date(`january 1 ${currentYear+1} 00:00:00`)
+        // const currentDate = new Date()
+        // const diff = newYear-currentDate
+        // const d = Math.floor(diff/1000/60/60/24)
+        // const h = Math.floor((diff/1000/60/60)%24)
+        // const m = Math.floor((diff/1000/60)%60)
+        // const s = Math.floor((diff/1000)%60)
+        
+
+
+        // days.innerHTML=d<10?'0'+d:d;
+        // hours.innerHTML=h<10?'0'+h:h;
+        // minutes.innerHTML=m<10?'0'+m:m;
+        // seconds.innerHTML=s<10?'0'+s:s;
+
+        // }
+        // updateTime()
+
+        // setInterval(clock,1000)
+
+
+        let endDate = "24 December 2023 10:00 PM"
+
+        function clock(){
+            const end = new Date(endDate)
+            const now = new Date()
+            const diff = end - now
+
+            const d  = Math.floor(diff/1000/60/60/24)
+            console.log(d);
+            const h  = Math.floor((diff/1000/60/60)%24)
+            console.log(h);
+            const m  = Math.floor((diff/1000/60)%60)
+            console.log(m);
+            const s  = Math.floor((diff/1000)%60)
+            console.log(s);
+            
+
+            days.innerHTML=d<10?'0'+d:d;
+            hours.innerHTML=h<10?'0'+h:h;
+            minutes.innerHTML=m<10?'0'+m:m;
+            seconds.innerHTML=s<10?'0'+s:s;
+        }
+        clock()
+
+        setInterval(clock,1000)
+         /*COUNTDOWN TIMER ENDS*/
+    </script>
+</body>
+</html>

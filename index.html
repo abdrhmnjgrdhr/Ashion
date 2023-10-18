@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashion</title>
+    <link rel="icon" href="./img/heart.png">
+
+    <!--        STYLE SHEET BEGINS       -->
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!--        STYLE SHEET ENDS       -->
+
+    <!--        BOOTSRAP CSS CDN LINK BEGINS       -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--        BOOTSRAP CDN LINK ENDS       -->
+
+    <!--        FONT AWESOME CDN LINK BEGINS       -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--        FONT AWESOME CDN LINK BEGINS       -->
+
+    <!--        GOOGLE FONT LINK BEGINS       -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+
+    <!--        GOOGLE FONT LINK BEGINS       -->
+
+    <!--        AOS CDN LINK BEGINS       -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--        AOS CDN LINK ENDSS       -->
+
+</head>
+<body class="overflow-x-hidden">
+
+    <!--        NAV_BAR BEGINS       -->
+
+    <div class="nav-bar p-5 pt-3 pb-0 pb-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center ">
+            <img class="ms-lg-5" src="./img/logo.png" alt="">
+            <ul class="nav list-unstyled d-flex gap-3 mt-4 d-none d-lg-flex">
+                <li><a href="./index.html"  target="_blank" class="active position-relative text-decoration-none text-black fw-bolder">HOME</a></li>
+                <li><a href="./shopcart.html" target="_blank" class="position-relative text-decoration-none text-black fw-bolder" onclick="showCart()">SHOP CART (<span class="cart-count">4</span>)</a></li>
+                <li><a href="#" class="position-relative text-decoration-none text-black fw-bolder">PAGES</a></li>
+                <li><a href="./blog.html" target="_blank" class="position-relative text-decoration-none text-black fw-bolder">BLOGS</a></li>
+                <li><a href="./contact.html" target="_blank" class="position-relative text-decoration-none text-black fw-bolder">CONTACT</a></li>
+            </ul>
+    
+                <div class="d-flex gap-3 mt-4 me-5 d-none d-lg-flex">
+                    <span class="text-secondary fs-6" role="button">Login / Register</span>
+                    <ul class="list-unstyled d-flex gap-3" role="button">
+                        <li><i class="fa-solid fa-magnifying-glass" style="color: #0d0d0d;"></i></li>
+                        <li><i class="fa-regular fa-heart" style="color: #050505;"></i></li>
+                        <li><i class="fa-solid fa-bag-shopping" style="color: #171717;"></i></li>
+                    </ul>
+                </div>
+    
+               
+                <i class="fa-solid fa-bars me-0 d-lg-none d-flex justify-content-center mt-2 ms-5 fs-3 border border-dark p-1 rounded" style="color: #00040a; " role="button" onclick="show()"></i>
+               
+    
+        </div>
+
+        <!--        SIDE_NAV_BAR BEGINS       -->
+
+        <div id="sideNav" class="side-nav position-fixed z-1  bg-light top-0 d-flex flex-column justify-content-center align-items-center">
+            <img class="ms-5" src="./img/logo.png" alt="">
+            <ul class="list-unstyled d-flex flex-column gap-3 mt-4 ">
+                <li><a href="./index.html" class="text-decoration-none text-black">HOME</a></li>
+                <li><a href="./shopcart.html" class="text-decoration-none text-black btn-cart">SHOP CART (<span class="cart-count">4</span>)</a></li>
+                <li><a href="#" class="text-decoration-none text-black">PAGES</a></li>
+                <li><a href="./blog.html" target="_blank" class="text-decoration-none text-black">BLOGS</a></li>
+                <li><a href="./contact.html" target="_blank" class="text-decoration-none text-black">CONTACT</a></li>
+            </ul>
+            <i class="fa-solid fa-angle-left fs-3 border border-dark p-2 rounded-circle mt-5" style="color: #00040a;" onclick="hide()"></i>
+        </div>
+
+        <!--        SIDE_NAV_BAR ENDS       -->
+
+    
+
+    </div>
+
+    <!--        NAV_BAR ENDS       -->
+    
+    <!--        CATOGARY CONTAINER BEGINS       -->
+
+
+    <div class="row overflow-hidden  mt-2" data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true">
+        <div class="col-12 col-lg-6  catogary-1">  
+           <div class="mt-5 container ps-5 d-flex flex-column justify-content-around">
+            <h1 style=" font-family: cookie; font-size: 60px; " class="mt-5">Women’s fashion</h1>
+            <p class="para w-75 fs-6">Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna aliquapendisse ultrices gravida.</p>
+            <h5 role="button">SHOP NOW</h5>
+           </div>
+        </div>
+        <div class="ps-lg-1 col-12  col-lg-6 pt-lg-0 ps-3 pt-1 ps-sm-0">
+            <div class="d-flex flex-column flex-md-row gap-2 gap-md-2 gap-lg-3 ">
+            <div class="catogary-2 ">
+                <h4 class="fw-bolder mt-5 ms-4">Men’s fashion</h4>
+                <p class="ms-4">358 items</p>
+                <h6 role="button" class="ms-4">SHOP NOW</h6>
+            </div>
+            <div class="catogary-3">
+                <h4 class="fw-bolder mt-5 ms-4 ms-sm-0">Kid’s fashion</h4>
+                <p class="ms-4">273 items</p>
+                <h6 role="button" class="ms-4">SHOP NOW</h6>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-md-row gap-2 gap-lg-3 gap-md-2 pt-2">
+            <div class="catogary-4">
+                <h4 class="fw-bolder mt-5 ms-4">Cosmetics</h4>
+                <p class="ms-4">159 items</p>
+                <h6 role="button" class="ms-4">SHOP NOW</h6>
+            </div>
+            <div class="catogary-5">
+                <h4 class="fw-bolder mt-5 ms-4">Accessories</h4>
+                <p class="ms-4">792 items</p>
+                <h6 role="button" class="ms-4">SHOP NOW</h6>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--        CATOGARY CONTAINER ENDS       -->
+
+
+    <!--        NEW PRODUCTS BEGINS       -->
+
+
+
+    <div class="d-flex flex-column align-items-center" data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true">
+        <div class="pro-head mt-5 pt-5 d-flex justify-content-center align-items-center gap-md-5 flex-column  flex-lg-row">
+            <h4 class="fw-bolder  ms-5">NEW PRODUCT</h4>
+            <div class="control d-flex justify-content- gap-3 mt-3 ms-5 gap-md-5 flex-wrap ">
+                <p role="button" class="btns btn-active position-relative" data-filter="all">ALL</p>
+                <p role="button" class="btns position-relative" data-filter="girl">girl’s</p>
+                <p role="button" class="btns position-relative" data-filter="boy">boy’s</p>
+                <p role="button" class="btns position-relative" data-filter="kids">Kid’s</p>
+                <p role="button" class="btns position-relative" data-filter="accessories">Accessories</p>
+                <p role="button" class="btns position-relative" data-filter="cosmetics">Cosmetics</p>
+            </div>
+        </div>
+        <div class="product container m-lg-5 d-flex justify-content-center flex-wrap gap-4">
+            <div class="product-container m-lg-5 d-flex justify-content-center flex-wrap gap-4">
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="girl"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-1.jpg" alt="">
+                        <p class="position-absolute top-0 bg-success text-light p-2 m-2">NEW</p>
+                        <div class="hover-items position-absolute d-flex gap-2">
+                            <i role="button"  class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" id="add-cart" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <div id="dress-title">Buttons tweed blazer</div>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.1599</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="boy"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-2.jpg" alt="">
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Flowy striped skirt</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.7523</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="girl"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-3.jpg" alt="">
+                        <p class="position-absolute top-0 bg-dark text-light p-2 m-2 ">OUT OF STOCK</p>
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Cotton T-Shirt</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong  class="dress-price">Rs.1999</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="boy"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-4.jpg" alt="">
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Slim striped pocket shirt</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong  class="dress-price">Rs.2599</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="boy"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-5.jpg" alt="">
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Fit micro corduroy shirt</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.1399</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="girl"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-6.jpg" alt="">
+                        <p class="position-absolute top-0 bg-danger text-light p-2 m-2">SALE</p>
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Tropical Kimono</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.999</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="girl"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-7.jpg" alt="">
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Contrasting sunglasses</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.1799</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item=" kids"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product-8.jpg" alt="">
+                        <p class="position-absolute top-0 bg-danger text-light p-2 m-2">SALE</p>
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Water resistant backpack</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.1899</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="cosmetics"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product 9.jpg" alt="">
+                        <p class="position-absolute top-0 bg-danger text-light p-2 m-2">SALE</p>
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Clinique LipBalm</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.899</strong>
+                </div>
+                <div data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                data-aos-once="true" class="box d-flex flex-column align-items-center" data-item="accessories"> 
+                    <div class="img position-relative top-0">
+                        <img class="pro position-relative top-0" src="./img/product/product 10.jpg" alt="">
+                        <p class="position-absolute top-0 bg-danger text-light p-2 m-2">SALE</p>
+                        <div class="hover-items  position-absolute d-flex gap-2">
+                            <i role="button" class="fa-regular fa-heart rounded-circle p-2 fs-5 rotate"></i>
+                            <i role="button" class="add-cart fa-solid fa-cart-shopping rounded-circle p-2 fs-5 rotate"></i>
+                        </div>
+                    </div>
+                    <p class="dress-title">Gucci Hand Bag</p>
+                    <span class="" style="font-size: 10px;">⭐⭐⭐⭐⭐</span><br>
+                    <strong class="dress-price">Rs.4999</strong>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--        NEW PRODUCTS ENDS       -->
+
+    <!--        RADIO SLIDER BEGINS       -->
+
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom"
+    data-aos-once="true" class="slider overflow-hidden">
+        <div class="slides d-flex ">
+            <input class="d-none" type="radio" id="radio1" name="radios">
+            <input class="d-none" type="radio" id="radio2" name="radios">
+            <input class="d-none" type="radio" id="radio3" name="radios">
+
+            <div class="slide first position-relative">
+                <img class="img-fluid"  src="./img/banner/banner-1.jpg" alt="">
+                <div class="position-absolute d-flex flex-column align-items-center justify-content-center" style="top: 30%; left: 35%; ">
+                    <span class="fs-5 text-danger" style=" font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie; font-size: 80px;">The Project Jocket</h1>
+                    <a class="position-relative fw-bolder fs-6 text-decoration-none text-black" href="#" style=" font-family: sans-serif; ">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide position-relative">
+                <img class="img-fluid" src="./img/banner/banner-2.jpg" alt="">
+                <div class="position-absolute d-flex flex-column align-items-center justify-content-center" style="top: 30%; left: 35%; ">
+                    <span class="fs-5 text-danger"  style=" font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie; font-size: 80px;">The Project Jocket</h1>
+                    <a class="position-relative fw-bolder fs-6 text-decoration-none text-black" href="#" style=" font-family: sans-serif;">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide position-relative" >
+                <img class="img-fluid" src="./img/banner/banner-3.jpg" alt="">
+                <div class="position-absolute d-flex flex-column align-items-center justify-content-center" style="top: 30%; left: 35%; ">
+                    <span class="fs-5 text-danger" style="font-family: sans-serif;">THE CHLOE COLLECTION</span>
+                    <h1 style="font-family: cookie; font-size: 80px;">The Project Jocket</h1>
+                    <a class="position-relative fw-bolder fs-6 text-decoration-none text-black" href="#" style="font-family: sans-serif;">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="auto position-absolute d-flex justify-content-center">
+                <div class="auto1"></div>
+                <div class="auto2"></div>
+                <div class="auto3"></div>
+            </div>
+
+        </div>
+        <div class="manual position-absolute d-flex justify-content-center" >
+            <label for="radio1" class="manuals" role="button"></label>
+            <label for="radio2" class="manuals" role="button"></label>
+            <label for="radio3" class="manuals" role="button"></label>
+        </div> 
+    </div>
+
+    <!--        RADIO SLIDER ENDS       -->
+
+    <!--        TRND FEATURES BESTSALES BEGINS       -->
+
+    <div class="container  mt-5 mb-5 " data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true">
+        <div class="mt-5 container row d-flex justify-content-center align-items-end ">
+            <div class="col-12 col-md-4 mt-5 ps-5 pe-5">
+                <h6 class="highligts fw-bolder position-relative">HOT TREND</h6>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/ht-1.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Chain Bucket Bag</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.500</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/ht-2.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Pendant earrings</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.852</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/ht-3.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Cotton T-Shirt</h6>
+                        <span style="font-size: 10px;" >⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.789</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mt-5 ps-5 pe-5">
+                <h6 class="highligts fw-bolder position-relative">BEST SELLERS</h6>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/bs-1.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Chain Bucket Bag</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.785</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/bs-2.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Pendant earrings</h6>
+                        <span>⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.159</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/bs-3.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Cotton T-Shirt</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.759</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mt-5 ps-5 pe-5">
+                <h6 class="highligts fw-bolder position-relative">FEATURE</h6>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/f-1.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Chain Bucket Bag</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.259</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/f-2.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Pendant earrings</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.753</h6>
+                    </div>
+                </div>
+                <div class="mt-5 d-flex gap-3">
+                    <img src="./img/trend/f-3.jpg" alt="">
+                    <div class="d-flex flex-column gap-2">
+                        <h6>Cotton T-Shirt</h6>
+                        <span style="font-size: 10px;">⭐⭐⭐⭐⭐</span>
+                        <h6 class="fw-bolder">Rs.759</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--        TRND FEATURES BESTSALES ENDS       -->
+
+
+    <!--        DISCOUNT TAB BEGINS       -->
+
+    <div data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true" class="container d-flex flex-column flex-lg-row justify-content-center mb-5">
+        <img  class="mt-5 img-fluid" src="./img/discount.jpg" alt="">
+        <div  class="img-fluid discount-text position-relative mt-lg-5 " style="background-color: #f4f4f4;">
+            <div class="discount z-1 d-flex flex-column justify-content-center align-items-center p-5 position-relative" >
+                <span class="mt-5">DISCOUNT</span>
+                <h2 class="text-danger">Summer 2023</h2>
+                <h5  class="text-danger fw-bolder"><span class="text-black fw-normal">SALE</span> 50% OFF</h5>
+            </div>
+
+            <div class="countdown img-fluid d-flex mt-3 ps-4 ps-md-5 pe-5  align-items-center justify-content-center gap-2 gap-md-5">
+                <div class="countdown-box d-flex align-items-baseline gap-1 h-25 w-25 ms-1 align-items-center" >
+                    <h2 id="days" class="fw-bolder">00</h2>
+                    <p>Days</p>
+                </div>
+                <div class="countdown-box d-flex align-items-baseline  gap-1 h-25 w-25 ms-1  align-items-center" >
+                    <h2 id="hours" class="fw-bolder">00</h2>
+                    <p>Hours</p>
+                </div>
+                <div class="countdown-box d-flex align-items-baseline gap-1 me-3 h-25 w-25 ms-1  align-items-center" >
+                    <h2 id="minutes" class="fw-bolder">00</h2>
+                    <p>Minutes</p>
+                </div>
+                <div class="countdown-box d-flex align-items-baseline gap-1 h-25 w-25 ms-1  align-items-center">
+                    <h2 id="seconds" class="fw-bolder">00</h2>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <a role="button" href="#" class=" text-black  d-flex justify-content-center mt-5 mb-5 fw-bolder">SHOP NOW</a>
+
+        </div>
+
+        
+    </div>    
+
+    <!--        DISCOUNT TAB ENDS       -->
+
+
+    <!--        SUPPORT SECTION BEGINS       -->
+
+    <section class=" support d-flex flex-column flex-md-row flex-md-wrap gap-5 align-items-baseline justify-content-lg-center p-5 p-md-0 ps-md-3 mb-5" data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true">
+        <div class="d-flex gap-3">
+            <i class="fa-solid fa-car d-flex text-danger" style=" font-size: 40px;"></i>
+            <div>
+                <h6 class="fw-bolder">Free Shipping</h6>
+                <p style=" font-size: 12px;">For all oder over $99</p>
+            </div>
+        </div>
+        <div class="d-flex gap-3">
+            <i class="fa-regular fa-money-bill-1 text-danger" style="font-size: 40px;"></i>
+            <div class="">
+                <h6 class="fw-bolder">Money Back Guarantee</h6>
+                <p style=" font-size: 12px;">if good have Problems</p>
+            </div>
+        </div>
+        <div class="d-flex gap-3">
+            <i class="fa-solid fa-phone text-danger" style="font-size: 40px;"></i>
+            <div>
+                <h6 class="fw-bolder">Online Support 24/7</h6>
+                <p style=" font-size: 12px;">Dedicated support</p>
+            </div>
+        </div>
+        <div class="d-flex gap-3">
+            <i class="fa-solid fa-headphones-simple text-danger" style="font-size: 40px;"></i>
+            <div>
+                <h6 class="fw-bolder">Payment Secure</h6>
+                <p style=" font-size: 12px;">100% secure payment</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <!--        SUPPORT SECTION ENDS       -->
+
+
+    <!--        INSTAGRAM SECTION BEGINS       -->
+
+    <div class="instagram d-flex flex-md-row flex-column flex-nowrap flex-md-wrap flex-lg-nowrap mb-5  justify-content-center align-items-center" data-aos="fade-up"
+    data-aos-duration="1000" 
+    data-aos-once="true">
+        <div class="insta-1">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+        <div class="insta-2">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+        <div class="insta-3">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+        <div class="insta-4">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+        <div class="insta-5">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+        <div class="insta-6">
+            <div class="insta-text d-flex flex-column justify-content-center align-items-center">
+                <i class="fa-brands fa-instagram fs-2 text-black"></i>
+                <a class="text-decoration-none text-dark fs-6 fw-bolder" href="#">@ashion_shop</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--        INSTAGRAM SECTION ENDS       -->
+
+
+    <!--        FOOTER SECTION BEGINS       -->
+
+    <section data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom" 
+    data-aos-once="true"class=" container d-md-flex gap-5  justify-content-center">
+        <div class=" mt-5 ">
+            <img class="mb-3" src="./img/logo.png" alt=""><br>
+            <p class="w-75" style="font-size: 14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt cilisis.</p>
+            <img  class="mt-2" src="./img/pay.png" alt="">
+        </div>
+
+        <div class=" mt-5">
+            <h6 class="mb-3 fw-bolder">QUICKLINKS</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2" style="font-size: 14px;">
+                <li><a class="text-decoration-none text-secondary" href="#">About</a></li>
+                <li><a class="text-decoration-none text-secondary" href="./blog.html" target="_blank">Blogs</a></li>
+                <li><a class="text-decoration-none text-secondary" href="./contact.html">Contacts</a></li>
+                <li><a class="text-decoration-none text-secondary" href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="mt-5">
+            <h6 class="mb-3 fw-bolder " >Acoounts</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2" style="font-size: 14px;">
+                <li><a class="text-decoration-none text-secondary" href="#">My Account</a></li>
+                <li><a class="text-decoration-none text-secondary" href="#">Orders Tracking</a></li>
+                <li><a class="text-decoration-none text-secondary" href="#">Checkout</a></li>
+                <li><a class="text-decoration-none text-secondary" href="#">Whishlist</a></li>
+            </ul>
+        </div>
+
+        <div class="newsletter mt-5">
+            <h6 class="mb-3 fw-bolder" >NEWSLETTER</h6>
+            <input type="email" placeholder="Email" class="p-2 w-75 rounded-pill position-relative">
+            <button class="text-bg-danger text-light border-0 pt-2 pb-2 ps-2 pe-2 rounded-pill position-absolute " type="submit">Submit</button>
+            <div class="d-flex gap-2 mt-2">
+                <i role="banner" class="fa-brands fa-facebook-f border border-black ps-2 pe-2 pt-1 pb-1 rounded-circle" style="color: #000205; "></i>
+                <i role="button" class="fa-brands fa-twitter border border-black ps-2 pe-2 pt-1 pb-1 rounded-circle" style="color: #000000;"></i>
+                <i role="button" class="fa-brands fa-facebook-f border border-black ps-2 pe-2 pt-1 pb-1 rounded-circle" style="color: #000205;"></i>
+                <i role="button" class="fa-brands fa-instagram border border-black ps-2 pe-2 pt-1 pb-1 rounded-circle" style="color: #000205;"></i>
+                <i role="button" class="fa-brands fa-twitter border border-black ps-2 pe-2 pt-1 pb-1 rounded-circle" style="color: #050505;"></i>
+            </div>
+        </div>
+
+        
+
+
+    </section>
+    <hr>
+    <div class="row mt-2">
+        <div class="col-12 text-center" style="font-size: 12px;">
+            Copyright © 2023 All rights reserved  | Designed By ❤️ <a class="text-decoration-none text-danger" href="https://instagram.com/jagir.dhar?igshid=OGQ5ZDc2ODk2ZA==
+            " target="blank"> JAGIRDHAR</a>
+        </div>
+    </div>
+
+    <!--        FOOTER SECTION ENDS      -->
+
+
+    <!--        BOOTSRAP JS CDN LINK BEGINS       -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!--        BOOTSRAP JS CDN LINK ENDS       -->
+
+    <!--        SCRIPT PAGE LINK BEGINS       -->
+
+    <script src="./script.js"></script>
+
+    <!--        SCRIPT PAGE LINK ENDS       -->
+
+    <!--        AOS CDN LINK BEGINS       -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!--        AOS CDN LINK BEGINS       -->
+    
+</body>
+</html>
